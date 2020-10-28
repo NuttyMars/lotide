@@ -1,3 +1,4 @@
+//function built in eqArrays.js file
 const eqArrays = function(arrayOne, arrayTwo) {
   if (arrayOne.length !== arrayTwo.length) {
     return false;
@@ -11,7 +12,8 @@ const eqArrays = function(arrayOne, arrayTwo) {
   return areEqual;
 };
 
-
+//logs if two arrays are equal or not
+//function built in assertEqualArrays.js file
 const assertEqualArrays = function(arrayOne, arrayTwo) {
   if (eqArrays(arrayOne, arrayTwo)) {
     return (`🟩 Assertion Passed: ${arrayOne} === ${arrayTwo} in data types and length\n`);
@@ -30,7 +32,7 @@ const middle = function(array) {
     // find index of middle element:
     // half of length rounded down, since array index starts at 0
     const indexOfMiddleElement = Math.floor(array.length / 2);
-    // return element inside an array
+    // return element inside its own array
     return [array[indexOfMiddleElement]];
   }
   // arrays with even number of elements will return two elements
@@ -42,7 +44,7 @@ const middle = function(array) {
   }
 }
 
-
+//make sure the middle function is returning the good values
 console.log(assertEqualArrays(middle([1]), []));
 console.log(assertEqualArrays(middle([1, 2]), []));
 console.log(assertEqualArrays(middle([1, 2, 3, 4, 5]), [3]));
