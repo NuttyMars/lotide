@@ -1,3 +1,4 @@
+//function built in asserEqual.js file
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log(`🟩 Assertion Passed: ${actual} === ${expected}\n`);
@@ -6,6 +7,7 @@ const assertEqual = function(actual, expected) {
   }
 };
 
+// return first element in an array
 const head = function(array) {
   return array[0];
 };

@@ -1,3 +1,4 @@
+// function built in assertEqual.js file
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log(`🟩 Assertion Passed: ${actual} === ${expected}\n`);
@@ -6,21 +7,22 @@ const assertEqual = function(actual, expected) {
   }
 };
 
+//takes in two arrays to see if they are equal
 const eqArrays = function(arrayOne, arrayTwo) {
   //check if lengths are the same, if not no need to check further
   if (arrayOne.length !== arrayTwo.length) {
     return false;
   }
+
+  //loop through both arrays at the same time (lengths are equal, doesn't matter which one we use for looping)
   //assume elements are equal
   let areEqual = true;
-  //loop through both arrays at the same time
-  //used first array length because they are equal, so it doesn't matter
   for (let i = 0; i < arrayOne.length; i++) {
-    //if elements are different, areEqual changes to false
     if (arrayOne[i] !== arrayTwo[i]) {
       areEqual = false;
     }
   }
+  //if elements are different, areEqual changes to false, else it stays true
   return areEqual;
 };
 

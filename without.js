@@ -1,3 +1,5 @@
+//function built in eqArrays.js
+//determines if two arrays are equal (boolean)
 const eqArrays = function(arrayOne, arrayTwo) {
   if (arrayOne.length !== arrayTwo.length) {
     return false;
@@ -11,7 +13,8 @@ const eqArrays = function(arrayOne, arrayTwo) {
   return areEqual;
 };
 
-
+//function built in assertEqualArrays.js
+//prints visual of eqArrays result
 const assertEqualArrays = function(arrayOne, arrayTwo) {
   if (eqArrays(arrayOne, arrayTwo)) {
     return (`🟩 Assertion Passed: ${arrayOne} === ${arrayTwo} in data types and length\n`);
@@ -20,7 +23,9 @@ const assertEqualArrays = function(arrayOne, arrayTwo) {
   }
 };
 
+//function that takes in two arrays and returns a new one that contains elements from source that are not found in itemsToRemove
 const without = function(source, itemsToRemove) {
+  //starting with an empty array to which to push out results
   let extractedArray = [];
   //if arrays are equal, return empty array
   if (eqArrays(source, itemsToRemove)) {
@@ -28,7 +33,7 @@ const without = function(source, itemsToRemove) {
   } else {
   //loop through arrays to determine which elements to push
     for (let i = 0; i < source.length; i++) {
-      //suppose the elements of the two arrays are not equal, change value if they are
+      //suppose the elements of the two arrays are not equal (these will be the elements we want to push)
       let elementsAreSame = false;
       for (let j = 0; j < itemsToRemove.length; j++) {
         if ((source[i] === itemsToRemove[j])) {
@@ -44,6 +49,7 @@ const without = function(source, itemsToRemove) {
   }
 };
 
+//compare result of without function to expected result
 console.log(assertEqualArrays(without([1, 2, 3], [1, 2, 3]), []));
 
 console.log(assertEqualArrays(without([1, 2, 3], [1]), [2, 3]));
