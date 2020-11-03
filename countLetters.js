@@ -29,3 +29,5 @@ assertEqual(countLetters('LHL')['L'], 2);
 assertEqual(countLetters('LHL')['j'], undefined);
 assertEqual(countLetters('lighthouse in the house')[' '], undefined);
 assertEqual(countLetters('lighthouse in the house')['h'], 4);
+
+module.exports = countLetters;

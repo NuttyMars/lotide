@@ -47,3 +47,5 @@ assertEqualArrays(letterPositions('LHL')['L'], [0, 2]);
 assertEqualArrays(letterPositions('L HL')['H'], [2]);
 assertEqualArrays(letterPositions('lighthouse in the house')['h'], [3, 5, 15, 18]);
 assertEqualArrays(letterPositions('lighthouse in the house')['e'], [9, 16, 22]);
+
+module.exports = letterPositions;

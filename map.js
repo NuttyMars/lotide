@@ -76,4 +76,4 @@ console.log(assertEqualArrays(results2, [2, 4, 6, 4, 6, 22, 3, 737684927]));
 console.log(assertEqualArrays(results3, ['Learn arrow functions!', 'Learn arrow functions!', 'Rockin\' it!' ]));
 
 
-
+module.exports = map;

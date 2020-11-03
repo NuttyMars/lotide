@@ -30,3 +30,5 @@ const myObject = {
 console.log(assertEqual(findKey(myObject, x => x.stars === 2), 'noma'));
 console.log(assertEqual(findKey(myObject, x => x.stars === 3), 'Akaleri'));
 console.log(assertEqual(findKey(myObject, x => x.stars === 0), undefined));
+
+module.exports = findKey;
