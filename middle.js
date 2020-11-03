@@ -2,26 +2,20 @@
 
 const middle = function(array) {
   // arrays with one or two elements have no middle
+  // arrays with odd number of elements will return one element
+  // arrays with even number of elements will return two elements
+
   if (array.length <= 2) {
     return [];
-  }
 
-  // arrays with odd number of elements will return one element
-  else if (array.length % 2 === 1) {
-    // find index of middle element:
-    // half of length rounded down, since array index starts at 0
+  } else if (array.length % 2 === 1) {
     const indexOfMiddleElement = Math.floor(array.length / 2);
-    // return element inside its own array
     return [array[indexOfMiddleElement]];
-  }
-  
-  // arrays with even number of elements will return two elements
-  else if (array.length % 2 === 0) {
-    // index of middle elements will be at half length and one below
+
+  } else if (array.length % 2 === 0) {
     const indexAtHalfLength = array.length / 2;
-    // return the two elements inside and array
     return [array[indexAtHalfLength - 1], array[indexAtHalfLength]];
   }
-}
+};
 
 module.exports = middle;
